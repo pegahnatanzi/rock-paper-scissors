@@ -12,7 +12,10 @@ pip install -r requirements.txt
 
 In in the root directory of your local repository, create a new file called ".env", and update the contents of the ".env" file to specify your desired username:
 
-    PLAYER_NAME="Jon Snow"
+    PLAYER_NAME="Pegah"
 
 > NOTE: the ".env" file is usually the place for passing configuration options and secret credentials, so as a best practice we don't upload this file to version control (which is accomplished via a corresponding entry in the [".gitignore"](/.gitignore) file). This means each person who uses our code needs to create their own local ".env" file.
 
+To run the script to see the output:
+
+```python my_script.py```
