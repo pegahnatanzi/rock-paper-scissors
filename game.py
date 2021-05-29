@@ -42,40 +42,72 @@ print("COMPUTER CHOICE", computer_choice)
 
 #Determining the Winner
 
-# Rock beats Scissors
+# Rock beats Scissors - Note this is the original method I tried on my own. Below, find the more efficient code worked on in class (starting at line 84).
 
-if (user_choice == "rock") and (computer_choice == "scissors"):
-    print("You win!")
+# if (user_choice == "rock") and (computer_choice == "scissors"):
+    # print("You win!")
 
-if (computer_choice == "rock") and (user_choice == "scissors"):
-    print("Oh, the computer won. It's ok!")
+# if (computer_choice == "rock") and (user_choice == "scissors"):
+    # print("Oh, the computer won. It's ok!")
 
 #Paper beats Rock
 
-if (user_choice == "paper") and (computer_choice == "rock"):
-    print("You win!")
+# if (user_choice == "paper") and (computer_choice == "rock"):
+    # print("You win!")
 
-if (computer_choice == "paper") and (user_choice == "rock"):
-    print("Oh, the computer won. It's ok!")
+# if (computer_choice == "paper") and (user_choice == "rock"):
+    # print("Oh, the computer won. It's ok!")
 
 # Scissors beats Paper
 
-if (user_choice == "scissors") and (computer_choice == "paper"):
-    print("You win!")
+# if (user_choice == "scissors") and (computer_choice == "paper"):
+    # print("You win!")
 
-if (computer_choice == "scissors") and (user_choice == "paper"):
-    print("Oh, the computer won. It's ok!")
+# if (computer_choice == "scissors") and (user_choice == "paper"):
+    # print("Oh, the computer won. It's ok!")
 
 # Rock vs Rock, Paper vs Paper, and Scissors vs Scissors each results in a "tie"
 
-if (user_choice == "rock") and (computer_choice == "rock"):
-    print("It's a tie!")
+# if (user_choice == "rock") and (computer_choice == "rock"):
+    # print("It's a tie!")
 
-if (user_choice == "paper") and (computer_choice == "paper"):
-    print("It's a tie!")
+# if (user_choice == "paper") and (computer_choice == "paper"):
+    # print("It's a tie!")
 
-if (user_choice == "scissors") and (computer_choice == "scissors"):
-    print("It's a tie!")
+# if (user_choice == "scissors") and (computer_choice == "scissors"):
+    # print("It's a tie!")
 
+
+# print("Thanks for playing. Please play again!")
+
+
+# Tie Scenarios - Rock vs Rock, Paper vs Paper, and Scissors vs Scissors each results in a "tie"
+if user_choice == computer_choice:
+    print("It;s a tie, try again!")
+
+# Now, we'll use an elif clause. The way the computer evaluates this is: if the first if condition isn't true, it's going to go to the next elif clause, starting from left to right 
+# (Code adapated from Reid in Slack)
+
+if user_choice == "rock":
+    if computer_choice == "rock":
+        print("IT'S A TIE")
+    elif computer_choice == "paper":
+        print("OH, THE COMPUTER WON...")
+    elif computer_choice == "scissors":
+        print("YOU WON! CONGRATS!")
+elif user_choice == "paper":
+    if computer_choice == "rock":
+        print("YOU WON! CONGRATS!")
+    elif computer_choice == "paper":
+        print("IT'S A TIE")
+    elif computer_choice == "scissors":
+        print("OH, THE COMPUTER WON...")
+elif user_choice == "scissors":
+    if computer_choice == "rock":
+        print("OH, THE COMPUTER WON...")
+    elif computer_choice == "paper":
+        print("YOU WON! CONGRATS!")
+    elif computer_choice == "scissors":
+        print("IT'S A TIE")
 
 print("Thanks for playing. Please play again!")
