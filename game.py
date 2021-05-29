@@ -1,16 +1,16 @@
 
+# Setting up enviornment variables
+
 import random
 
 import os
-from dotenv import load_dotenv # see: https://github.com/theskumar/python-dotenv
 
-#
-# 2) After that, we generally run any setup code, like setting environment variables:
-#
+from dotenv import load_dotenv # see: https://github.com/theskumar/python-dotenv
 
 load_dotenv() # invokes / uses the function we got from the third-party package. this one happens to read env vars from the ".env" file. see the "python-dotenv" package docs for more info
 
 PLAYER_NAME = os.getenv("PLAYER_NAME", default="Player One") # uses the os module to read the specified environment variable and store it in a corresponding python variable
+
 
 
 print("Rock, Paper, Scissors, Shoot!")
