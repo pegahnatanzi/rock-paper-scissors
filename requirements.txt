@@ -15,3 +15,30 @@ python-dotenv
 
 # etc.
 
+# Another more efficient way to do it, using dictionaries
+
+# RPS winner determination as a dictioanry:
+# winners = {
+#     "rock": {
+#         "rock": None,
+#         "paper": "paper",
+#         "scissors": "rock",
+#     },
+#     "paper": {
+#         "rock": "paper",
+#         "paper": None,
+#         "scissors": "scissors",
+#     },
+#     "scissors": {
+#         "rock": "rock",
+#         "paper": "scissors",
+#         "scissors": None,
+#     }
+# }
+# winner = winners[user_choice][computer_choice]
+# if winner == user_choice:
+#     print("YOU WON!")
+# elif winner == computer_choice:
+#     print("YOU LOST")
+# else:
+#     print("TIE")
